@@ -35,6 +35,12 @@ class Dog:
         self.age += 1
         logging.info(f"{self.name} ahora tiene {self.age} años.")
 
+    def fetch(self, item: str):
+        """
+        Este metodo define como se comporta el perro.
+        """
+        logging.info(f"{self.name} ha traido un/a {item} y lo tiene en el ocico")
+
 if __name__ == "__main__":
     # Crear instancias de la clase Dog
     dog1 = Dog("Rex", 3)
@@ -43,6 +49,10 @@ if __name__ == "__main__":
     # Llamar métodos
     dog1.bark()
     dog2.bark()
+
+    # Trae objeto
+    dog1.fetch("Media")
+    dog2.fetch("Pelota")
 
     # Celebrar cumpleaños
     dog1.birthday()
