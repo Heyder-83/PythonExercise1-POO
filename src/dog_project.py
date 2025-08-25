@@ -21,6 +21,9 @@ class Dog:
         self.age = age
         logging.info(f"Se ha creado un perro llamado {self.name} de {self.age} años.")
 
+    def __str__(self):
+        return f"Perro: {self.name}, {self.age} años"
+
     def bark(self):
         """
         Un método define el comportamiento de los objetos.

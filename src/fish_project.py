@@ -13,6 +13,9 @@ class Fish:
         self.species = species
         logging.info(f"Ha ingresado un pez llamado {self.name} de {self.age} años y de la especie {self.species}")
 
+    def __str__(self):
+        return f"Pez: {self.name}, {self.age} años, especie {self.species}"
+
     def swim(self):
         logging.info(f"{self.name} esta nadando")
         print(f"{self.name}: *nadando glu glu glu*")

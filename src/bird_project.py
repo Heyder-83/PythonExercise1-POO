@@ -20,6 +20,11 @@ class Bird:
         self.species = species
         logging.info(f"Se ha creado un ave de especie {self.species} llamada {self.name} de {self.age} años.")
 
+
+    def __str__(self):
+        return f"Ave: {self.name}, {self.age} años, especie {self.species}"
+
+
     def sing(self):
         """
         Método que representa el canto del ave.

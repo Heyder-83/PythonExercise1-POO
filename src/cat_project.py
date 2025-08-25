@@ -21,6 +21,9 @@ class Cat:
         self.age = age
         logging.info(f"Se ha creado un gato llamado {self.name} de {self.age} años.")
 
+    def __str__(self):
+        return f"Gato: {self.name}, {self.age} años"
+
     def meow(self):
         """
         Un método define el comportamiento de los objetos.
