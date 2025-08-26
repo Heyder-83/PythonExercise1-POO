@@ -38,6 +38,13 @@ class Cat:
         self.age += 1
         logging.info(f"{self.name} ahora tiene {self.age} años.")
 
+    def sleep(self):
+        """
+        Este método simula el sueño del gato.
+        """
+        logging.info(f"{self.name} está durmiendo.")
+        print(f"{self.name}: Zzz...")
+
 if __name__ == "__main__":
     # Crear instancias de la clase Cat
     cat1 = Cat("Milo", 2)
@@ -50,6 +57,10 @@ if __name__ == "__main__":
     # Celebrar cumpleaños
     cat1.birthday()
     cat2.birthday()
+
+    # Hacer que el gato duerma
+    cat1.sleep()
+    cat2.sleep()
 
     # Mostrar atributos
     print(f"{cat1.name} tiene {cat1.age} años.")

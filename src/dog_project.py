@@ -44,6 +44,17 @@ class Dog:
         """
         logging.info(f"{self.name} ha traido un/a {item} y lo tiene en el ocico")
 
+    def age_comparison(self, other_dog):
+        """
+        Compara la edad de este perro con otro perro.
+        """
+        if self.age > other_dog.age:
+            logging.info(f"{self.name} es mayor que {other_dog.name}.")
+        elif self.age < other_dog.age:
+            logging.info(f"{self.name} es menor que {other_dog.name}.")
+        else:
+            logging.info(f"{self.name} y {other_dog.name} tienen la misma edad.")
+
 if __name__ == "__main__":
     # Crear instancias de la clase Dog
     dog1 = Dog("Rex", 3)
@@ -64,3 +75,6 @@ if __name__ == "__main__":
     # Mostrar atributos
     print(f"{dog1.name} tiene {dog1.age} años.")
     print(f"{dog2.name} tiene {dog2.age} años.")
+
+    # Comparar edades
+    dog1.age_comparison(dog2)
